@@ -18,5 +18,4 @@ $("button").click(function(){
 function showData(doc){
   showhere.innerHTML = doc.data().temp + " °C";
 }
-var date = new Date();
-document.getElementById("date").innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
+document.getElementById("date").innerHTML = getTime();
