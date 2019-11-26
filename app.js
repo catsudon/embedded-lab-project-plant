@@ -18,4 +18,3 @@ $("button").click(function(){
 function showData(doc){
   showhere.innerHTML = doc.data().temp + " °C";
 }
-document.getElementById("date").innerHTML = getTime();
