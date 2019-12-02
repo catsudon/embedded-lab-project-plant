@@ -1,5 +1,9 @@
 body{
-    background-color: #141414;
+  min-height: 600px;
+  background: #a8c0ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 h1{
     text-align: left;
@@ -41,7 +45,7 @@ button {
 	font-size:23px;
 	font-weight:bold;
 	padding:12px 18px;
-	text-shadow:0px 1px 44px #76f063;
+	text-shadow:0px 1px 44px #fafd0f;
   margin-left: 25%;
 }
 button:hover {
