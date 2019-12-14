@@ -1,7 +1,7 @@
 var database = firebase.database();
 
 window.onload=function(){
-  var firebaseRef = firebase.database().ref("temp");
+  var firebaseRef = firebase.database().ref("aqours/temp");
   firebaseRef.once("value").then(function(dataSnapshot){
     console.log(dataSnapshot.val())
     var aqours = dataSnapshot.val().toFixed(2)
