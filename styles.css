@@ -1,5 +1,5 @@
 body{
-background-color: #353C51;
+background-color: #1c2229;
 }
 h1{
     text-align: left;
@@ -13,14 +13,18 @@ h1{
 h2{
   text-align: center;
   font-size: 8rem;
-    font-family: 'Roboto';
-    color: #ce1127;
+  font-family: 'Roboto';
+  color: #ce1127;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
-hr{
-  width: 80%;
-}
-#footer{
+footer{
   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 p{
@@ -28,22 +32,4 @@ p{
 }
 .link{
   color: #2c87f0;
-}
-
-button {
-	background-color:#cef5ab;
-	border-radius:10px;
-	border:2px solid #39ff14;
-	display:inline-block;
-	cursor:pointer;
-	color:#291b29;
-	font-family: 'Roboto';
-	font-size:23px;
-	font-weight:bold;
-	padding:12px 18px;
-	text-shadow:0px 1px 44px #fafd0f;
-  margin-left: 25%;
-}
-button:hover {
-	background-color:#e3e3e3;
 }
