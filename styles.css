@@ -10,14 +10,18 @@ h1{
   margin-left:16%;
   color: #fff;
 }
+.bruh{
+  top: 10%;
+  width: 100%;
+  position: fixed;
+}
+
 h2{
   text-align: center;
   font-size: 8rem;
   font-family: 'Roboto';
   color: #ce1127;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+
 }
 footer{
   text-align: center;
