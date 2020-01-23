@@ -25,7 +25,7 @@ function changeTemp(){
     firebaseRef = firebase.database().ref("aqours/temp");
     firebaseRef.once("value").then(function(dataSnapshot){
       console.log(dataSnapshot.val());
-      aqours = dataSnapshot.val().toFixed(2);
+      aqours = (dataSnapshot.val()+1.2).toFixed(2);
       // showData(aqours);
       document.querySelector("h2").innerHTML = aqours+" °C";
 
