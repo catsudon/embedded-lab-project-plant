@@ -5,7 +5,7 @@ h1{
     text-align: left;
   font-family: 'Roboto';
   letter-spacing: 11.9px;
-  margin-top: 13%;
+  margin-top: 2%;
   font-size: 5rem;
   margin-left:16%;
   color: #fff;
@@ -18,9 +18,10 @@ h1{
 
 h2{
   text-align: center;
-  font-size: 8rem;
+  font-size: 10rem;
   font-family: 'Roboto';
-  color: #ce1127;
+  color: #ca44a2;
+  margin-top: 2%;
 
 }
 footer{
