@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+    actually the font used in the album "loveless"
+*/
+@font-face {
+    font-family:"Noto Sans", "ITC Kabel";
+    src: url('fonts/ITCKabelStdMedium.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    /* if we have a box with 200px + 20px of padding on each side
+    normally we would have a 240px box
+    
+    but by declaring border-box, when ever we're talking about 200px box
+    , that 200px already includes padding.
+    */
+    box-sizing: border-box;
+
+    font-family: "Noto Sans", Raleway;
+    color: #777; /* light gray is easier to read */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ul had a margin by default, we don't want it */
+.nav ul {
+    margin: 0;
+}
+
+/* [home store about] */
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block; /* inline element cannot have top and bottom padding, so we have to declare this */
+    padding: .5em; /* 1 em = 1 font size*/
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter; /*[point] make it lighter, so it blends with the bg */
+    border-bottom: 1px solid rgba(255, 255, 255, .3)
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+.main-header {
+  background-color: rgba(184, 43, 25, .3);
+  background-image: url("Images/Header Background.jpg");
+
+  /* // now that we have both color and picture
+    // we are going to blend it */
+  background-blend-mode: multiply;
+  /* expand it as wide/tall as it can */
+  background-size: cover;
+  padding-bottom: 30px;
+}
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Noto Sans", "ITC Kabel";
+    color: white;
+    font-weight: normal;
+}
+
+.band-name-large {
+    font-size: 9vw;
+}
+
+.content-section {
+    margin: 1em; /*[point] make it more beautiful to read*/
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section-header {
+    font-family: "Noto Sans","ITC Kabel";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.about-band-image {
+    float: left;
+    height: 200px;
+    width: auto;
+    margin: 15px;
+    border-radius: 5%;
+    border: 10px solid #ddd;
+}
+
+.main-footer {
+    background-color: #b03274;
+    color: #FFF;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #b03274;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #b03274;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border-bottom: none;
+}
+
+.tour-item {
+    display: inline-block; /* we cannot edit width of inline elem, so we have to make it inline-block elem */
+    /* https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1 */
+    padding-right: .5em; /*[point] spacing makes it cleaner*/
+}
+
+.tour-date {
+    color: #555;
+    width: 46%;
+    font-weight: bold;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 52%;
+}
+
+.tour-btn {
+    max-width: 30%; 
+    /*[point] we used max-width bc we don't want to make it statically 30%*/
+}
+
+.btn-primary {
+    color: white;
+    background-color: #b03274;
+    border: none; /* border none make it clean */
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #8c1b56;
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+    width: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

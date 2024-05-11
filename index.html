@@ -1,38 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Temperature</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<html>
 
-    <link rel="stylesheet" href="styles.css">
+<head>
+  <title>My Bloody Valentine</title>
+  <meta name="description" content="a mocking site for me to play with css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-  </head>
-  <body>
-<div class="bruh">
+<body>
+  <header class="main-header">
+
+    <h1 class="band-name band-name-large">LIVE DATA</h1>
+    <div class="container">
+      <!-- <button class="btn btn-header" type="button">Get our Latest Album</button>
+      <button class="btn btn-header btn-play" type="button">&#9658;</button> -->
+    </div>
+
+  </header>
+  <section class="content-section container">
+    <h2 class="section-header">your plant status</h2>
+    <div>
+      <div class="tour-row">
+        <span class="tour-item tour-date">LIGHT</span>
+        <span class="tour-item tour-arena" id="light">loading</span>
+        <button type="button" class="tour-item tour-btn btn btn-primary">moderate</button>
+      </div>
+      <div class="tour-row">
+        <span class="tour-item tour-date">HUMIDITY</span>
+        <span class="tour-item tour-arena" id="humidity">loading</span>
+        <button type="button" class="tour-item tour-btn btn btn-primary">moderate</button>
+      </div>
+      <div class="tour-row">
+        <span class="tour-item tour-date">LAST UPDATED ON</span>
+        <span class="tour-item tour-arena" id="time">loading</span>
+      </div>
+  </section>
+
+  <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-analytics.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-database.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
 
 
-    <h1>LIVE TEMP</h1>
-
-  <h2>รอสักครู่</h2>
-  <!-- <button type="button" class="button">refresh here</button> -->
-
-</div>
-
-<footer class="footer">
-
-  <p>© Created by <a href="https://line.me/ti/p/~37041" class="link">Mark48853</a></p>
-
-</footer>
-
-
-
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="app.js"></script>
-  </body>
 </html>

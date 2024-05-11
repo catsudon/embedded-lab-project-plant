@@ -1,40 +1,46 @@
-var firebaseConfig = {
-  apiKey: "AIzaSyBhqoH6zrLdXpadgazQXhGw3sHb42tWSe8",
-  authDomain: "physics-2bc57.firebaseapp.com",
-  databaseURL: "https://physics-2bc57.firebaseio.com",
-  projectId: "physics-2bc57",
-  storageBucket: "physics-2bc57.appspot.com",
-  messagingSenderId: "1011118672315",
-  appId: "1:1011118672315:web:81f2e91a32772910a8dc9e",
-  measurementId: "G-W0J5HL2HYD"
+const firebaseConfig = {
+  apiKey: "AIzaSyDCDgDxZumV0o2z90bsIq3RNQGF1k7zZ9A",
+  authDomain: "embedded-summ.firebaseapp.com",
+  databaseURL: "https://embedded-summ-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "embedded-summ",
+  storageBucket: "embedded-summ.appspot.com",
+  messagingSenderId: "733110752658",
+  appId: "1:733110752658:web:7c746315f564c852309d4b",
+  measurementId: "G-3TG2WPPJGG"
 };
-// Initialize Firebase
+
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
-
 var database = firebase.database();
-var aqours = 0;
-var firebaseRef = firebase.database().ref("aqours/temp");
 
-window.onload= changeTemp();
+var humidity = 0;
+var light = 0;
+var lastUpdate = 0;
+var firebaseRef = firebase.database().ref("/humidity");
 
-function changeTemp(){
-  setInterval(function(){
 
-    firebaseRef = firebase.database().ref("aqours/temp");
-    firebaseRef.once("value").then(function(dataSnapshot){
-      console.log(dataSnapshot.val());
-      aqours = (dataSnapshot.val()+1.2).toFixed(2);
-      // showData(aqours);
-      document.querySelector("h2").innerHTML = aqours+" °C";
+function update() {
 
-  }, 2000)
+  firebaseRef = firebase.database().ref("/humidity");
+  firebaseRef.once("value").then(function (dataSnapshot) {
+    console.log(dataSnapshot.val());
+    humidity = (dataSnapshot.val()).toFixed(2);
+    document.querySelector("#humidity").innerHTML = humidity + " %";
+  })
 
+  firebaseRef = firebase.database().ref("/light");
+  firebaseRef.once("value").then(function (dataSnapshot) {
+    console.log(dataSnapshot.val());
+    light = (dataSnapshot.val()).toFixed(2);
+    document.querySelector("#light").innerHTML = light + " %";
+  })
+
+  firebaseRef = firebase.database().ref("/lastUpdate");
+  firebaseRef.once("value").then(function (dataSnapshot) {
+    console.log(dataSnapshot.val());
+    lastUpdate = (dataSnapshot.val()).toFixed(2);
+    document.querySelector("#time").innerHTML = lastUpdate;
   })
 };
-// 
-//
-// $("button").click(function(){
-//   changeTemp();
-// });
+
+update();
+var interval = setInterval(update, 200);
