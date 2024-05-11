@@ -37,7 +37,7 @@ function update() {
   firebaseRef = firebase.database().ref("/lastUpdate");
   firebaseRef.once("value").then(function (dataSnapshot) {
     console.log(dataSnapshot.val());
-    lastUpdate = (dataSnapshot.val()).toFixed(2);
+    lastUpdate = (dataSnapshot.val());
     document.querySelector("#time").innerHTML = lastUpdate;
   })
 };
